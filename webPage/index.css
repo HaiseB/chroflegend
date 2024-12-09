@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    appearance: none;
+  }
+  
+  body {
+    width: 100%;
+    min-width: 900px;
+    height: 100vh;
+    padding: 10px;
+  
+    background-color: #081a26;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  a {
+    color: #bdb693;
+    font-family: "DM Serif Display", serif;
+  }
+  
+  #container {
+    width: 100%;
+  
+    background-color: #010a13;
+    border: 1px solid #444;
+    border-top: 4px solid #bdb693;
+  }
+  
+  nav {
+    position: relative;
+    width: 100%;
+  
+    border-bottom: 1px solid #444;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #nav-first,
+  #nav-second,
+  #nav-first-list,
+  #nav-second-list,
+  #rp,
+  #ea,
+  #box-icon-user-status,
+  #box-icon,
+  #user-status,
+  #status {
+    display: flex;
+    align-items: center;
+  }
+  
+  #nav-box-btn-ply > button,
+  #nav-box-btn-alert > button,
+  #rp-ea,
+  #nick {
+    color: #e5e5e5;
+  }
+  
+  #nav-first,
+  #nav-second {
+    gap: 25px;
+  }
+  
+  /*BOTAO JOGAR*/
+  
+  #nav-box-btn-ply {
+    position: relative;
+    min-width: 155px;
+    height: 40px;
+    margin: 15px 0 15px 45px;
+  
+    outline: 1px solid #444;
+    border: 3px solid #010a13;
+    box-shadow: inset 0px 0px 0 2px #004566;
+    overflow: hidden;
+  }
+  
+  #nav-box-btn-ply > button {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    padding-left: 20px;
+  
+    background-color: #222;
+    border: none;
+    box-shadow: inset 2px 2px 0 #1bb8e0, inset 2px -2px 0 #1bb8e0;
+  
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  #nav-box-btn-ply > button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+  
+    width: 20px;
+    aspect-ratio: 1 / 1;
+  
+    background: linear-gradient(45deg, transparent 50%, #222 50%);
+    border-top: 2px solid #1bb8e0;
+    border-right: 2px solid #1bb8e0;
+    border-radius: 7px 0 7px;
+  
+    transform: translatey(-50%) scaley(130%) rotate(45deg);
+    z-index: 0;
+  }
+  
+  #nav-box-btn-ply > button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(0, -50%);
+  
+    height: 50px;
+    aspect-ratio: 1/1;
+  
+    background-color: #010a13;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0 2px #1bb8e0;
+  }
+  
+  #nav-box-btn-ply > button:hover {
+    background-color: #010a13;
+  }
+  
+  #nav-box-btn-ply > button:hover::before {
+    background: linear-gradient(45deg, transparent 50%, #010a13 50%);
+  }
+  
+  #nav-first > svg {
+    position: absolute;
+    top: 48%;
+    left: 30px;
+    min-width: 50px;
+    height: 50px;
+  
+    transform: translate(0, -50%) scale(120%);
+  
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  /* BOTAO ALERTA*/
+  
+  #nav-box-btn-alert {
+    width: 33px;
+    height: 33px;
+    padding: 2px;
+  
+    background-color: #ad7e11;
+    border-radius: 50%;
+  }
+  
+  #nav-box-btn-alert > button {
+    width: 100%;
+    height: 100%;
+  
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.8);
+  
+    font-weight: bold;
+  
+    cursor: pointer;
+  }
+  
+  #nav-box-btn-alert:hover {
+    background: linear-gradient(330deg, #efbc4f, #ad7e11);
+  }
+  
+  /* Lista do lado esquerdo*/
+  
+  #nav-first-list {
+    height: 100%;
+  }
+  
+  .nav-first-list-item {
+    height: 100%;
+    line-height: 90px;
+  }
+  
+  .nav-first-list-item:hover {
+    background: linear-gradient(to bottom, transparent, #44444450);
+  }
+  
+  .nav-first-list-item-link {
+    display: block;
+    height: 100%;
+    padding: 0 15px;
+  
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  
+  .nav-first-list-item-link:hover {
+    color: #f5f5f5;
+  }
+  
+  /* Lista do lado direito*/
+  
+  #nav-second-list {
+    position: relative;
+    height: 100%;
+    padding-right: 10px;
+  }
+  
+  .nav-second-list-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #nav-second-list::before {
+    content: "";
+    position: absolute;
+    right: 0;
+  
+    width: 2px;
+    height: 80%;
+  
+    background: linear-gradient(45deg, transparent, #bdb693, transparent);
+  }
+  
+  .nav-second-list-item:hover {
+    background: linear-gradient(to bottom, transparent, #44444450);
+  }
+  
+  .nav-second-list-item-link {
+    height: 100%;
+    padding: 0 15px;
+  
+    font-size: 24px;
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  .nav-second-list-item-link:hover {
+    color: #f5f5f5;
+  }
+  
+  /* Moedas*/
+  
+  #rp-ea {
+    padding-right: 20px;
+  }
+  
+  #rp,
+  #ea {
+    gap: 10px;
+  }
+  
+  .coin {
+    width: 20px;
+    height: 20px;
+  
+    border-radius: 50%;
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  #rp .coin {
+    color: #cea544;
+  }
+  
+  #ea .coin {
+    color: #1bb8e0;
+  }
+  

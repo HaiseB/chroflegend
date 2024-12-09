@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mainPopup.css">
+    <title>Chroflegend</title>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <h1>Chroflegend</h1>
+        <div class="text-right profile-picture">
+            <img id="profileImage" src="https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon5416.jpg?image=e_upscale,q_auto,f_webp,w_auto&v=1721451321478"
+                alt="ProfilPicture" class="rounded-circle" size="64" height="64" width="64">
+        </div>
+        <div class="col-12">
+            <p>Hello, <span id="summonerName">Rhaegald</span></p>
+        </div>
+        <h2>Counter check</h2>
+        <div id="dataContainer"></div>
+        <form class="filter-container mb-3">
+            <select id="champion-select" class="form-select">
+                <option>Choose a laner you want to counter</option>
+                <option>Aatrox</option>
+                <option>Ahri</option>
+                <option>Akali</option>
+                <option>Akshan</option>
+                <option>Alistar</option>
+                <option>Amumu</option>
+                <option>Anivia</option>
+                <option>Annie</option>
+                <option>Aphelios</option>
+                <option>Ashe</option>
+                <option>Aurelion Sol</option>
+                <option>Aurora</option>
+                <option>Azir</option>
+                <option>Bard</option>
+                <option>Bel'Veth</option>
+                <option>Blitzcrank</option>
+                <option>Brand</option>
+                <option>Braum</option>
+                <option>Briar</option>
+                <option>Caitlyn</option>
+                <option>Camille</option>
+                <option>Cassiopeia</option>
+                <option>Cho'Gath</option>
+                <option>Corki</option>
+                <option>Darius</option>
+                <option>Diana</option>
+                <option>Dr. Mundo</option>
+                <option>Draven</option>
+                <option>Ekko</option>
+                <option>Elise</option>
+                <option>Evelynn</option>
+                <option>Ezreal</option>
+                <option>Fiddlesticks</option>
+                <option>Fiora</option>
+                <option>Fizz</option>
+                <option>Galio</option>
+                <option>Gangplank</option>
+                <option>Garen</option>
+                <option>Gnar</option>
+                <option>Gragas</option>
+                <option>Graves</option>
+                <option>Gwen</option>
+                <option>Hecarim</option>
+                <option>Heimerdinger</option>
+                <option>Hwei</option>
+                <option>Illaoi</option>
+                <option>Irelia</option>
+                <option>Ivern</option>
+                <option>Janna</option>
+                <option>Jarvan IV</option>
+                <option>Jax</option>
+                <option>Jayce</option>
+                <option>Jhin</option>
+                <option>Jinx</option>
+                <option>K'Santé</option>
+                <option>Kai'Sa</option>
+                <option>Kalista</option>
+                <option>Karma</option>
+                <option>Karthus</option>
+                <option>Kassadin</option>
+                <option>Katarina</option>
+                <option>Kayle</option>
+                <option>Kayn</option>
+                <option>Kennen</option>
+                <option>Kha'Zix</option>
+                <option>Kindred</option>
+                <option>Kled</option>
+                <option>Kog'Maw</option>
+                <option>LeBlanc</option>
+                <option>Lee Sin</option>
+                <option>Leona</option>
+                <option>Lillia</option>
+                <option>Lissandra</option>
+                <option>Lucian</option>
+                <option>Lulu</option>
+                <option>Lux</option>
+                <option>Malphite</option>
+                <option>Malzahar</option>
+                <option>Maokai</option>
+                <option>Maître Yi</option>
+                <option>Milio</option>
+                <option>Miss Fortune</option>
+                <option>Mordekaiser</option>
+                <option>Morgana</option>
+                <option>Naafiri</option>
+                <option>Nami</option>
+                <option>Nasus</option>
+                <option>Nautilus</option>
+                <option>Neeko</option>
+                <option>Nidalee</option>
+                <option>Nilah</option>
+                <option>Nocturne</option>
+                <option>Nunu et Willump</option>
+                <option>Olaf</option>
+                <option>Orianna</option>
+                <option>Ornn</option>
+                <option>Pantheon</option>
+                <option>Poppy</option>
+                <option>Pyke</option>
+                <option>Qiyana</option>
+                <option>Quinn</option>
+                <option>Rakan</option>
+                <option>Rammus</option>
+                <option>Rek'Sai</option>
+                <option>Rell</option>
+                <option>Renata Glasc</option>
+                <option>Renekton</option>
+                <option>Rengar</option>
+                <option>Riven</option>
+                <option>Rumble</option>
+                <option>Ryze</option>
+                <option>Samira</option>
+                <option>Sejuani</option>
+                <option>Senna</option>
+                <option>Sett</option>
+                <option>Shaco</option>
+                <option>Shen</option>
+                <option>Shyvana</option>
+                <option>Singed</option>
+                <option>Sion</option>
+                <option>Sivir</option>
+                <option>Skarner</option>
+                <option>Smolder</option>
+                <option>Sona</option>
+                <option>Soraka</option>
+                <option>Swain</option>
+                <option>Sylas</option>
+                <option>Syndra</option>
+                <option>Séraphine</option>
+                <option>Tahm Kench</option>
+                <option>Taliyah</option>
+                <option>Talon</option>
+                <option>Taric</option>
+                <option>Teemo</option>
+                <option>Thresh</option>
+                <option>Tristana</option>
+                <option>Trundle</option>
+                <option>Tryndamere</option>
+                <option>Twisted Fate</option>
+                <option>Twitch</option>
+                <option>Udyr</option>
+                <option>Urgot</option>
+                <option>Varus</option>
+                <option>Vayne</option>
+                <option>Veigar</option>
+                <option>Vel'Koz</option>
+                <option>Vex</option>
+                <option>Vi</option>
+                <option>Viego</option>
+                <option>Viktor</option>
+                <option>Vladimir</option>
+                <option>Volibear</option>
+                <option>Warwick</option>
+                <option>Wukong</option>
+                <option>Xayah</option>
+                <option>Xerath</option>
+                <option>Xin Zhao</option>
+                <option>Yasuo</option>
+                <option>Yone</option>
+                <option>Yorick</option>
+                <option>Yuumi</option>
+                <option>Zac</option>
+                <option>Zed</option>
+                <option>Zeri</option>
+                <option>Ziggs</option>
+                <option>Zilean</option>
+                <option>Zoé</option>
+                <option>Zyra</option>
+            </select>
+            <input type="text" id="filter-input" class="filter-input form-control">
+        </form>
+        <div class="d-flex justify-content-center d-none mb-3" id="loader">
+            <div class="spinner-border" role="status">
+            <span class="sr-only"></span>
+            </div>
+        </div>
+        <div id="picks" class="d-flex  flex-wrap justify-content-around">
+            <!--div class="card border-primary col-6 mb-3 mx-1" style="max-width: 20rem;">
+                <div class="card-header">
+                    <img src="https://opgg-static.akamaized.net/meta/images/lol/14.14.1/champion/Jhin.png?image=e_upscale,c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1721451321478"
+                        alt="Jhin" class="rounded-circle me-2" size="36" height="36" width="36">Jhin (54%)
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <a href="https://www.op.gg/champions/jhin/build" class="btn btn-success">Counter</a>
+                        <button type="button" class="btn btn-outline-primary" id="  ">Base build</button>
+                    </p>
+                </div>
+            </div-->
+        </div>
+        <!--div class="allChamps">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Winrate</th>
+                        <th scope="col">link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Miss Fortune</th>
+                        <td>64 %</td>
+                        <td><a>Counter build</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div-->
+        <div class="col-12 d-flex justify-content-around">
+            <a href="https://www.op.gg/summoners/euw/Rhaegald-5375" class="btn btn-outline-info" id="myOpgg">My
+                op.gg</a>
+            <button type="button" class="btn btn-outline-success" id="loltheory">loltheory.gg</button>
+            <button type="button" class="btn btn-outline-primary" id="openSettings">Open settings</button>
+        </div>
+        <figure class="text-end pt-4">
+            <figcaption class="blockquote-footer">
+                Bro, the code of this app is <cite title="Source Title"><a
+                        href="https://github.com/HaiseB">here</a></cite> 👹
+            </figcaption>
+        </figure>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
