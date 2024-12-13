@@ -10,6 +10,7 @@
     "permissions": [
         "activeTab",
         "storage",
+        "scripting",
         "tabs"
     ],
     "content_security_policy": {
@@ -21,6 +22,7 @@
             "matches": ["<all_urls>"]
         }
     ],
+    "options_page": "webPage/settings.html",
     "host_permissions": [
         "https://www.op.gg/*"
     ]
