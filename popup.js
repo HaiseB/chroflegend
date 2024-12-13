@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const loltheoryButton = document.getElementById("loltheory");
   const openSettingsButton = document.getElementById("openSettings");
   const loader = document.getElementById('loader');
-  const picks = document.getElementById('picks');
 
   const profileImage = document.getElementById('profileImage');
   const summonerNameElement = document.getElementById('summonerName');
@@ -128,7 +127,7 @@ function createChampionCard(championName, role, filterValue) {
       cardBody.innerHTML = `
           <p class="card-text">
               <button type="button" class="btn btn-success disabled">Cntr build</button>
-              <a href="https://www.op.gg/champions/${championName}/build/${role.toLowerCase()}" class="btn btn-outline-primary">Base build</a>
+              <a href="https://loltheory.gg/lol/champion/${championName.toLowerCase()}/build-runes/${role.toLowerCase()}" class="btn btn-outline-primary">Base build</a>
           </p>
       `;
   }

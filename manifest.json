@@ -20,5 +20,8 @@
             "resources": ["webPage/settings.html", "webPage/bootstrap/*"],
             "matches": ["<all_urls>"]
         }
+    ],
+    "host_permissions": [
+        "https://www.op.gg/*"
     ]
 }
